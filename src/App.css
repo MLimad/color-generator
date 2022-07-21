@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+    padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form {
+	display: flex;
+	height: 60px;
+	align-items: center;
+	width: 500px;
+	justify-content: space-evenly;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+form input{
+    margin: 5px;
+    padding: 5px;
+    text-transform: uppercase;
+    outline: none;
+}
+form input[type="submit"]{
+    background-color: rgb(43, 55, 48);
+    color: white;
+    border: 1px solid transparent;
+    padding: 7px 15px;
+    cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+
+.error {
+    border: 2px solid red;
+    animation: shake 0.5s;
+    animation-timing-function: linear;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.valid{
+    border: 2px solid rgb(43, 55, 48);
 }
+
+@keyframes shake {
+    0%{
+        transform: translateX(-10px);
+    }
+    50%{
+
+        transform: translateX(10px);
+
+    }
+    100%{
+        transform: translateX(0px);
+
+    }
+}
+
+.colors-list{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.card-color {
+    position: relative;
+	width: calc(100%/5);
+	height: 150px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 19px;
+}
+
+
+
+
+.card-color p{
+    padding: 21px 25px;
+        margin: 0;
+}
+
+.c-white{
+    color: white;
+}
+
+.c-black{
+    color: black;
+}
+
+
+.copied{
+    font-size: 13px;
+
+}
+
